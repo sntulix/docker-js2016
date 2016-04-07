@@ -1,0 +1,20 @@
+- name: nvm and node.js.
+  shell: >
+    export NODE_VERSION=v4.2.6;
+    export CLIENT_HOME=/root;
+    git clone https://github.com/creationix/nvm.git $CLIENT_HOME/.nvm;
+    echo "if [[ -s $CLIENT_HOME/.nvm/nvm.sh ]] ; then source $CLIENT_HOME/.nvm/nvm.sh ; fi" >> $CLIENT_HOME/.bashrc;
+    bash -c 'source $CLIENT_HOME/.nvm/nvm.sh && nvm install $NODE_VERSION && nvm use $NODE_VERSION && nvm alias default $NODE_VERSION && ln -s $CLIENT_HOME/.nvm/versions/node/$NODE_VERSION/bin/node /usr/bin/node && ln -s $CLIENT_HOME/.nvm/versions/node/$NODE_VERSION/bin/npm /usr/bin/npm';
+- name: install npm packages.
+  shell: >
+    npm -g --ignore-scripts install spawn-sync;
+    npm -g --unsafe-perm install node-sass;
+    npm -g install less;
+    npm -g install stylus;
+    npm -g install eslint;
+    npm -g install react-redux;
+    npm -g install redux-devtools;
+    npm -g install material-ui;
+    npm -g install react react-dom babel-preset-react;
+    npm -g install webpack;
+    npm -g install typescript;

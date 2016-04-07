@@ -1,0 +1,7 @@
+- include: tasks/copy_ssh.yml
+- include: tasks/packages_option.yml
+- include: tasks/ricty_diminished-font.yml
+- include: tasks/genshin-font.yml
+- include: tasks/postgresql.yml
+- include: tasks/php.yml
+- include: tasks/js2016.yml
