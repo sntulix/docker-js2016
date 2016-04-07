@@ -110,7 +110,6 @@ RUN ansible-playbook -v --extra-vars "taskname=packages_option" ansible/playbook
 RUN ansible-playbook -v --extra-vars "taskname=ricty_diminished-font" ansible/playbook.yml
 RUN ansible-playbook -v --extra-vars "taskname=genshin-font" ansible/playbook.yml
 RUN ansible-playbook -v --extra-vars "taskname=postgresql" ansible/playbook.yml
-RUN ansible-playbook -v --extra-vars "taskname=php" ansible/playbook.yml
 RUN ansible-playbook -v --extra-vars "taskname=js2016" ansible/playbook.yml
 #RUN ansible-playbook -v --extra-vars "taskname=angular2" ansible/playbook.yml
 WORKDIR $CLIENT_HOME
